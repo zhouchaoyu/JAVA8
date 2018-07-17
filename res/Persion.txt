@@ -1,0 +1,8 @@
+#UTF-8
+#Mon Jun 11 16:10:37 CST 2018
+idNo=123456
+age=23
+name=小明
+isMerried=false
+sex=man
+profession=小学教师

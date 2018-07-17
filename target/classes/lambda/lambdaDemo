@@ -1,0 +1,8 @@
+1. 使用lambda表达式对列表进行迭代
+2. 使用lambda表达式和函数式接口Predicate对集合进行过滤
+	2.1  Collection.stream.filter(Predicate.add(Predicate)).forEach();多条件过滤
+3.  Collection.stream.map().forEach(); MAP流库操作。
+4.  Map和Reduce操作
+5.  Stream.collect 操作
+6.  summaryStatistics 摘要统计
+7.
