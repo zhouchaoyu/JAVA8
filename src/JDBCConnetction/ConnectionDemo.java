@@ -1,14 +1,12 @@
 package JDBCConnetction;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import javax.sql.DataSource;
-
-import org.junit.jupiter.api.Test;
+import java.util.Enumeration;
 
 public class ConnectionDemo {
 	
@@ -25,10 +23,20 @@ public class ConnectionDemo {
         Statement stmt = null;
         try{
             // 注册 JDBC 驱动
-            Class.forName("com.mysql.jdbc.Driver");
-        
+            Driver driver =(Driver) Class.forName(JDBC_DRIVER).newInstance();
+            DriverManager.registerDriver(driver);
             // 打开链接
             System.out.println("连接数据库...");
+             Enumeration<Driver>    drivernum =DriverManager.getDrivers();
+            while (drivernum.hasMoreElements()) {
+				Driver driver1= drivernum.nextElement();
+				System.out.println(driver1.getClass().getName());
+			}
+            
+  
+         
+            
+            
             conn = DriverManager.getConnection(DB_URL,USER,PASS);
         
             // 执行查询
@@ -37,7 +45,7 @@ public class ConnectionDemo {
             String sql;
             sql = "SELECT * FROM `prop_plot`;";
             ResultSet rs = stmt.executeQuery(sql);
-        
+            
             // 展开结果集数据库
             while(rs.next()){
                 // 通过字段检索

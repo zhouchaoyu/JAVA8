@@ -20,7 +20,7 @@ public class OuterClass {
 	    
 	    public static void main(String[] args) {
 	        OuterClass outerClass = new OuterClass();
-	        OuterClass.InnerClass innerClass = outerClass.new InnerClass();
+	        OuterClass.InnerClass innerClass =outerClass. new InnerClass();
 	        innerClass.getOuterClass().display();
 	        innerClass.print();
 	    }

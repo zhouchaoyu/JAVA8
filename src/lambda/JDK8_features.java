@@ -21,9 +21,9 @@ public class JDK8_features  {
 			 List<Integer> nums = Arrays.asList(1,1,null,2,3,4,null,5,6,7,8,9,10);
 			 // System.out.println( nums.stream().findFirst().get());    取值
 			 //System.out.println(nums.stream().count());  计数
-			 nums= nums.stream().filter((n)-> n!=null).collect(Collectors.toList());//过滤收集
+			 /*nums= nums.stream().filter((n)-> n!=null).collect(Collectors.toList());//过滤收集
 			 nums=nums.stream().distinct().collect(Collectors.toList());//去重
-			 nums.stream().limit(5).forEach(n-> System.out.println(n));
+*/			 nums.stream().limit(8).forEach(System.out::println);
 			 //求和
 			 
 			 

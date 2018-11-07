@@ -8,4 +8,7 @@ public class Persion<T>{
 	public void set(T t) {
 		this.t=t;
 	}
+	
+	
+	
 }
